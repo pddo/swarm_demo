@@ -7,9 +7,9 @@
 2.  Setup Swarm
 
         docker info # --> see "Swarm" status, default is inactive
-        docker swarm init --advertise-addr 192.168.0.23 # enable swarm
+        docker swarm init --advertise-addr <public IP> # enable swarm
     
-    JOin swarm as manager
+    Join swarm as manager
     
         # at swarm init host
         docker swarm join-token manager
