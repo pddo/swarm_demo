@@ -2,10 +2,17 @@ version: '3'
 
 services:
   web:
-    #image: 127.0.0.1:5000/stackdemo
     image: pddo/stackdemo
     build: .
     ports:
       - "8000:8000"
+    # deploy:
+    #   replicas: 5
+    #   update_config:
+    #     parallelism: 2
+    #     delay: 10s
+    #   restart_policy:
+    #     condition: on-failure
+    
   redis:
     image: redis:alpine
